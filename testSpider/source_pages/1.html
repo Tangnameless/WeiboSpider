@@ -1,0 +1,406 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta id="viewport" name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=2.0" />
+    <link rel="icon" sizes="any" mask="" href="https://h5.sinaimg.cn/upload/2015/05/15/28/WeiboLogoCh.svg"
+        color="black" />
+    <meta name="MobileOptimized" content="240" />
+    <title>转发微博</title>
+    <style type="text/css" id="internalStyle">
+        html,
+        body,
+        p,
+        form,
+        div,
+        table,
+        textarea,
+        input,
+        span,
+        select {
+            font-size: 12px;
+            word-wrap: break-word;
+        }
+
+        body {
+            background: #F8F9F9;
+            color: #000;
+            padding: 1px;
+            margin: 1px;
+        }
+
+        table,
+        tr,
+        td {
+            border-width: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        form {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        textarea {
+            border: 1px solid #96c1e6
+        }
+
+        textarea {
+            width: 95%;
+        }
+
+        a,
+        .tl {
+            color: #2a5492;
+            text-decoration: underline;
+        }
+
+        /*a:link {color:#023298}*/
+        .k {
+            color: #2a5492;
+            text-decoration: underline;
+        }
+
+        .kt {
+            color: #F00;
+        }
+
+        .ib {
+            border: 1px solid #C1C1C1;
+        }
+
+        .pm,
+        .pmy {
+            clear: both;
+            background: #ffffff;
+            color: #676566;
+            border: 1px solid #b1cee7;
+            padding: 3px;
+            margin: 2px 1px;
+            overflow: hidden;
+        }
+
+        .pms {
+            clear: both;
+            background: #c8d9f3;
+            color: #666666;
+            padding: 3px;
+            margin: 0 1px;
+            overflow: hidden;
+        }
+
+        .pmst {
+            margin-top: 5px;
+        }
+
+        .pmsl {
+            clear: both;
+            padding: 3px;
+            margin: 0 1px;
+            overflow: hidden;
+        }
+
+        .pmy {
+            background: #DADADA;
+            border: 1px solid #F8F8F8;
+        }
+
+        .t {
+            padding: 0px;
+            margin: 0px;
+            height: 35px;
+        }
+
+        .b {
+            background: #e3efff;
+            text-align: center;
+            color: #2a5492;
+            clear: both;
+            padding: 4px;
+        }
+
+        .bl {
+            color: #2a5492;
+        }
+
+        .n {
+            clear: both;
+            background: #436193;
+            color: #FFF;
+            padding: 4px;
+            margin: 1px;
+        }
+
+        .nt {
+            color: #b9e7ff;
+        }
+
+        .nl {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .nfw {
+            clear: both;
+            border: 1px solid #BACDEB;
+            padding: 3px;
+            margin: 2px 1px;
+        }
+
+        .s {
+            border-bottom: 1px dotted #666666;
+            margin: 3px;
+            clear: both;
+        }
+
+        .tip {
+            clear: both;
+            background: #c8d9f3;
+            color: #676566;
+            border: 1px solid #BACDEB;
+            padding: 3px;
+            margin: 2px 1px;
+        }
+
+        .tip2 {
+            color: #000000;
+            padding: 2px 3px;
+            clear: both;
+        }
+
+        .ps {
+            clear: both;
+            background: #FFF;
+            color: #676566;
+            border: 1px solid #BACDEB;
+            padding: 3px;
+            margin: 2px 1px;
+        }
+
+        .tm {
+            background: #feffe5;
+            border: 1px solid #e6de8d;
+            padding: 4px;
+        }
+
+        .tm a {
+            color: #ba8300;
+        }
+
+        .tmn {
+            color: #f00
+        }
+
+        .tk {
+            color: #ffffff
+        }
+
+        .tc {
+            color: #63676A;
+        }
+
+        .c {
+            padding: 2px 5px;
+        }
+
+        .c div a img {
+            border: 1px solid #C1C1C1;
+        }
+
+        .ct {
+            color: #9d9d9d;
+            font-style: italic;
+        }
+
+        .cmt {
+            color: #9d9d9d;
+        }
+
+        .ctt {
+            color: #000;
+        }
+
+        .cc {
+            color: #2a5492;
+        }
+
+        .nk {
+            color: #2a5492;
+        }
+
+        .por {
+            border: 1px solid #CCCCCC;
+            height: 50px;
+            width: 50px;
+        }
+
+        .me {
+            color: #000000;
+            background: #FEDFDF;
+            padding: 2px 5px;
+        }
+
+        .pa {
+            padding: 2px 4px;
+        }
+
+        .nm {
+            margin: 10px 5px;
+            padding: 2px;
+        }
+
+        .hm {
+            padding: 5px;
+            background: #FFF;
+            color: #63676A;
+        }
+
+        .u {
+            margin: 2px 1px;
+            background: #ffffff;
+            border: 1px solid #b1cee7;
+        }
+
+        .ut {
+            padding: 2px 3px;
+        }
+
+        .cd {
+            text-align: center;
+        }
+
+        .r {
+            color: #F00;
+        }
+
+        .g {
+            color: #0F0;
+        }
+
+        .bn {
+            background: transparent;
+            border: 0 none;
+            text-align: left;
+            padding-left: 0;
+        }
+    </style>
+    <script>if (top != self) { top.location = self.location; }</script>
+</head>
+
+<body>
+    <div class="tm"><a href="https://weibo.cn/msg/?unread=33"><span class="tmn">33</span>私信</a> <a
+            href="https://weibo.cn/msg/clearAllUnread?type=dcm&amp;rl=1"><img
+                src="https://h5.sinaimg.cn/upload/2016/12/30/125/5366.gif" alt="[X]" /></a><br /></div>
+    <div class="n" style="padding: 6px 4px;"><a href="https://weibo.cn/?tf=5_009" class="nl">首页</a>|<a
+            href="https://weibo.cn/msg/?tf=5_010" class="nl">消息</a>|<a href="https://huati.weibo.cn"
+            class="nl">话题</a>|<a href="https://weibo.cn/search/?tf=5_012" class="nl">搜索</a>|<a
+            href="/repost/HmIQdgWBP?uid=6399645614&amp;page=1&amp;rand=7761&amp;p=r" class="nl">刷新</a></div>
+    <div class="c tip"><a href="https://m.weibo.cn" id="top" class="tl">手机微博触屏版,点击前往&gt;&gt;</a></div>
+    <div class="s"></div>
+    <div class="c" id="M_">
+        <div> <a href="/overwatchleague">守望先锋联赛</a><img src="https://h5.sinaimg.cn/upload/2016/05/26/319/5337.gif"
+                alt="V" /> <span class="ctt">:<a
+                    href="https://weibo.cn/pages/100808topic?extparam=%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B%E8%81%94%E8%B5%9B&amp;from=feed">#守望先锋联赛#</a>
+                “我们0 – 7”：洛杉矶英勇队怎么了？<br /><a href="https://weib
+o.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FEJafD70&amp;ep=HmIQdgWBP%2C6399645614%2CHmIQdgWBP%2C6399645614">“我们0 –
+                    7”：洛杉矶英勇队怎么了？</a> </span> </di v>
+            <div><a href="/mblog/pic/HmIQdgWBP?rl=1"><img
+                        src="http://wx2.sinaimg.cn/wap180/006Z6gayly1g1gd0at88yj30xc0m878k.jpg" alt="图片"
+                        class="ib" /></a> <a href="/mblog/oripic?id=H
+mIQdgWBP&amp;u=006Z6gayly1g1gd0at88yj30xc0m878k&amp;rl=1">原图</a> <!-- 是否进行翻译 --> <span class="ct">03月26日 18:12 </span>
+                <a href="/spam/?mid=HmIQdgWBP&amp;fuid=6399645614&amp;type=1&amp;rl=1">举报</a> <a
+                    href="/fav/addFav/HmIQdgWBP?rl=1&amp;st=465476">收藏</a> <a href="/mblog/operation/HmIQdgWBP?uid=639
+9645614&amp;rl=1">操作</a> </div>
+        </div>
+        <div class="c"></div>
+        <div><span class="pms" id="rt">转发[34] </span><span> <a href="/comment/HmIQdgWBP?&amp;uid=6399645614&amp;#cmtfr
+m">评论[69]</a> </span><span> <a href="/attitude/HmIQdgWBP?#attitude">赞[140]</a> </span><br /></div>
+        <div class="pms">转发理由只显示前2000字<form action="/repost/dort/HmIQdgW
+BP?st=465476" method="post" id="mblogform">
+                <div> <input type="hidden" name="act" value="dort" /> <input type="hidden" name="rl" value="1" /> <input
+                        type="hidden" name="id" value="HmIQdgWBP" /> <textarea name="content" rows="2" cols="20"
+                        id="content"></textarea><br /> <input type="submit" value="转发" /> <input type="subm
+it" name="rtmsg" value="私信转发" /> <br /> <input type="checkbox" name="rtrootcomment" />同时作为给守望先锋联赛<img
+                        src="https://h5.sinaimg.cn/upload/2016/05/26/319/5337.gif" alt="V" />的评论发布. </div>
+            </form>
+        </div>
+        <div class="c"><a href="/u/5523834104">天然卷令人头秃</a><img
+                src="https://h5.sinaimg.cn/upload/2016/05/26/319/donate_btn_s.png" alt="M" />://<a
+                href="/n/%E6%B4%9B%E6%9D%89%E7%9F%B6%E8%8B%B1%E5%8B%87%E9%98%9F%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%A6%96%E8%83%9C%E5%91%80">@洛杉矶英勇队什么时候首胜呀</a>:
+            下阶段：“我们7-0”，洛杉矶英勇队又怎么了？（日常幻想<img alt="[二哈]"
+                src="//h5.sinaimg.cn/m/emoticon/icon/others/d_erha-0fecc90ac1.png" style="width:1em; height:1em;" />）
+            谢谢粉丝的分析，让我们下阶段做到更好。 <span class="cc"><a href="/attitude/Hm
+Zbpk1f1/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span class="ct"> 03月28日 11:48
+                来自Weibo.intl</span></div>
+        <div class="s"></div>
+        <div class="c"><a href="/u/5803631683">Kylzzz</a>:不要卖fate啊555//<a
+                href="/n/%E6%B4%9B%E6%9D%89%E7%9F%B6%E8%8B%B1%E5%8B%87%E9%98%9F%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%A6%96%E8%83%9C%E5%91%80">@洛杉矶英勇队什么时候首胜呀</a>:下阶段：“我们7-0”，洛杉矶英勇队又怎么了？（日常幻想<img
+                alt="[二哈]" src="//h5.sinaimg.cn/m/emoticon/icon/others/d_erha-0fecc90ac1.png" sty
+                le="width:1em; height:1em;" />） 谢谢粉丝的分析，让我们下阶段做到更好。 <s pan class="cc"><a
+                    href="/attitude/HmSxVbua5/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span
+                    class="ct"> 03月27日 18:54 来自iPhone</span></div>
+        <div c lass="s"></div>
+        <div class="c"><a href="/u/6613438383">今天千子村正落地了吗</a><img
+                src="https://h5.sinaimg.cn/upload/2016/05/26/319/donate_btn_s.png" alt="M" />:含泪支持英勇队[
+            强壮]🏻 <span class="cc"><a
+                    href="/attitude/HmQaalGEw/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span
+                class="ct"> 03月27日 12:50 来自普梅登基iPho
+                ne(玫瑰金)</span></div>
+        <div class="s"></div>
+        <div class="c"><a href="/marialudiy">才不是M酱</a><img
+                src="https://h5.sinaimg.cn/upload/2016/05/26/319/donate_btn_s.png" alt="M" />:<img alt="[允悲]"
+                src="//h5.sinaimg.cn/m/emoticon/icon/default/d_yunbei-9aa3c436a4.png"
+                style="width:1em; height:1em;" />救救孩子吧 <span class="cc"><a href="/attitude/HmOe8kFP
+2/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span class="ct"> 03月27日 07:54 来自 iPhone客户端
+            </span></div>
+        <div class="s"></div>
+        <div class="c"><a h ref="/u/3198030587">每天都在思考怎么样满宝兰斯洛特</a>://<a
+                href="/n/%E6%B4%9B%E6%9D%89%E7%9F%B6%E8%8B%B1%E5%8B%87%E9%98%9F%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%A6%96%E8%83%9C%E5%91%80">@洛杉矶英勇队什么时候首胜呀</a>:下阶段：“我们7-0”，洛杉矶英勇队又怎么了？（日常幻想<img
+                alt="[二哈]" src="//h5.sinaimg.cn/m/emoticon/icon/others/d_erha-0fecc90ac1.p
+ng" style="width:1em; height:1em;" />） 谢谢粉丝的分析，让我们下阶段做到更
+            好。 <span class="cc"><a
+                    href="/attitude/HmO8Imwk8/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span
+                class="ct"> 03月27日 07:41 来自AI实力派 vivo Z1< /span> </div> <div class="s">
+        </div>
+        <div class="c"><a href="/u/1628761312">草因碳</a><img
+                src="https://h5.sinaimg.cn/upload/2016/05/26/319/donate_btn_s.png" alt="M" />://<a
+                href="/n/%E6%B8%85%E5%B7%9D%E8%80%81%E9%BC%A0">@清川老鼠</a>:转发微博 <span class="cc"><a
+                    href="/attitude/HmNDwCKlS/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></spa n><span
+                    class="ct"> 03月27日 06:24 来自iPhone X</span></div>
+        <div class="s"></div>
+        <div class="c"><a href="/u/3563430905">Lamia_Liang</a>:55555555555 <span class="cc"><a href="
+/attitude/HmLxhtWdP/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span class="ct"> 03月27日 01:03
+                来自iPhone</span></div>
+        <div class="s"></div>
+        <div clas s="c"><a href="/llr1202">-AromaRR-</a>://<a
+                href="/n/%E6%B4%9B%E6%9D%89%E7%9F%B6%E8%8B%B1%E5%8B%87%E9%98%9F%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%A6%96%E8%83%9C%E5%91%80">@洛杉
+                矶英勇队什么时候首胜呀</a>:下阶段：“我们7-0”，洛杉矶英勇队又怎么了？（日常幻想<img alt="[二哈]"
+                src="//h5.sinaimg.cn/m/emoticon/icon/others/d_erha-0fecc90ac1.png" style="width
+:1em; height:1em;" />） 谢谢粉丝的分析，让我们下阶段做到更好。 <span class="cc"><a
+                    href="/attitude/HmLnO1AOj/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span
+                class="ct"> 03月27日 00:40 来自iPhone</span></div>
+        <div class="s">
+        </div>
+        <div class="c"><a href="/amy199948">清川老鼠</a><img
+                src="https://h5.sinaimg.cn/upload/2016/05/26/319/donate_btn_s.png" alt="M" />:转发微博 <span class="cc"><a
+                    href="/att
+itude/HmLnI9IeO/add?uid=7042413863&amp;rl=1&amp;do=rt&amp;st=465476">赞[0]</a></span><span class="ct"> 03月27日 00:40
+                来自Share微博客户端</span></div>
+        <div class="s"></div>
+        <div class="pa" id="pagelist">
+            <form action="/repost/HmIQdgWBP?uid=6399645614&amp;" method="post">
+                <div><a href="/repost/HmIQdgWBP?uid=6399645614&amp;&amp;page=2">下页</a> <input nam e="mp" type="hidden"
+                        value="4" /><input type="text" name="page" size="2"
+                        style="-wap-input-format: &quot;*N&quot;" /><input type="submit" value="跳页" /> 1/4页</div>
+            </form>
+            </di v>
+            <div class="s"></div>
+</body>
+
+</html>
