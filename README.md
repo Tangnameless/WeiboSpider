@@ -10,7 +10,9 @@
 没有设置账号池（穷）！  
 没有设置代理IP（穷）！    
 总之是一个适合穷人的，速率尚可的爬虫。    
-爬取的对象主要为微博文本，即热门微博的转发数据与评论数据，这也是微博语料来源最丰富的部分。每一条微博建立一个数据库，内设两个表分别存储转发和评论数据。singleWeibo.py和singleWeibo_comment.py 分别为爬取微博转发数据和微博评论数据的爬虫。  
+爬取的对象主要为微博文本，即热门微博的转发数据与评论数据。  
+每一条微博建立一个数据库，内设两个表分别存储转发和评论数据。  
+singleWeibo.py和singleWeibo_comment.py 分别为爬取微博转发数据和微博评论数据的爬虫。    
 
 ## 克隆环境 && 安装依赖
 python == 3.6.8  
@@ -23,7 +25,8 @@ selenium == 3.141.0
 git clone git@github.com:Tangnameless/noobWeiboSpider.git
 ```
 
-同时还需要安装MongoDB和chorme，请自行百度。特别要注意chorme和chormediver之间版本的对应问题。
+同时还需要安装MongoDB和chorme，请自行百度。  
+特别要注意chorme和chormediver之间版本的对应问题。
 
 ## 数据字段说明
 ### 1.转发数据
@@ -53,8 +56,9 @@ git clone git@github.com:Tangnameless/noobWeiboSpider.git
 ## 如何使用
 以下面这条微博为例
 ### 将网页版微博链接转换为weibo.cn中的链接
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190517154401254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5NjEwOTE1,size_16,color_FFFFFF,t_70)
-其在微博网页版中的url为：https://weibo.com/1686546714/Huz8eB7lU?type=comment#_rnd1558077460937  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190517154401254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5NjEwOTE1,size_16,color_FFFFFF,t_70)  
+其在微博网页版中的url为：  
+https://weibo.com/1686546714/Huz8eB7lU?type=comment#_rnd1558077460937  
 根据url中的**微博id**和**用户id**，将weibo.com的url改为weibo.cn中的url：  
 https://weibo.cn/repost/Huz8eB7lU?uid=1686546714&&page=1  
 根据要爬取的是评论还是转发，写入comment或repost  
@@ -81,7 +85,10 @@ CONCURRENT_REQUESTS	  | scrapy默认
 理论上每分钟抓取数据量|740
 理论上一天抓取数据量|**100w+**
 
-实际速度和你自己电脑的网速/CPU/内存有很大关系，同时，weibo.cn中数据总是有缺损的，理论抓取量是按页数来算的。  
-但是weibo.cn中经常会出现一页数据加载不够10条的情况，玄学。如示例微博爬取1000页后实得8908条，获取率约为89%。  
-对于使用selenium的情况，延迟太低也没有意义，浏览器渲染页面，scrapy运行都需要花费一定时间，所以实际延迟要大于0.1s。  
-具体爬一页数据暂停多长时间需要自己测试，以我的经验来说，爬取一页数据延迟2-3s不会被微博封IP，但最近爬的快些微博也能容忍。  
+实际速度和你自己电脑的网速/CPU/内存有很大关系。  
+weibo.cn中数据总是有缺损的，理论抓取量是按页数来算的。    
+weibo.cn中经常会出现一页数据加载不够10条的情况。
+如示例微博爬取1000页后实得8908条，获取率约为89%。  
+该项目使用selenium，延迟太低也没有意义，浏览器渲染页面，scrapy运行都需要花费一定时间，实际延迟大于0.1s。  
+具体爬一页数据暂停多长时间需要自己测试。
+以我的经验来说，爬取一页数据延迟2-3s不会被微博封IP，但最近爬的快些微博也能容忍。    
